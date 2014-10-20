@@ -46,7 +46,10 @@ set guifont=Monospace:h10
 set backupdir=~/vimtmp
 set directory=~/vimtmp
 
+" rebuild ctag index
+:nnoremap <f5> :!ctags -R<CR>
 " Set to auto read when a file is changed from the outside
+
 set autoread
 
 " Don't redraw while executing macros (good performance config)
