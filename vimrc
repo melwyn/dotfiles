@@ -43,6 +43,8 @@ set expandtab
 set hlsearch
 set guifont=Monospace:h10
 
+"set shell=/bin/bash\ -i
+
 set backupdir=~/vimtmp
 set directory=~/vimtmp
 
@@ -104,6 +106,8 @@ map <Leader>rr :!rake routes<cr>
 " switch back and forth code and tests
 map <Leader>tt :A<cr>                 
 
+" omnicomplete
+imap <Leader>. <C-x><C-p>
 
 " Nerdtree
 map <Leader>nt :NERDTree<cr>
