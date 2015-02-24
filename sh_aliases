@@ -56,6 +56,7 @@ alias pull='git pull'
 alias push='git push'
 alias gm='git merge'
 alias gra='git remote show origin'
+alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
 # alias to login to mysql -root
 alias mdb='mysql -u'
