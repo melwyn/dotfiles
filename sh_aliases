@@ -1,0 +1,66 @@
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias d='pwd'
+
+alias h='clear;cd ~'
+alias c='cd'
+
+alias b='cd ../'
+alias bb='cd ../..'
+alias bbb='cd ../../..'
+
+# some rails aliases
+alias rs='ruby script/server'
+alias rc='ruby script/console'
+alias trc='RAILS_ENV=test ruby script/console'
+
+alias gl='gem list'
+alias lgs='rvm list gemsets'
+
+# some rake aliases
+alias rdbm='rake db:migrate'
+alias rdbmp='rake db:migrate:plugins'
+
+alias trk='RAILS_ENV=test rake $1'
+
+# rpsec
+alias sp='clear;spec --color -fs'
+
+# some git aliases
+alias g='git'
+alias gs='clear;git st'
+alias gb='git br'
+alias glo='git log'
+alias gd='git diff'
+alias ga='git add'
+alias grm='git rm'
+alias gcm='git commit'
+alias gco='git checkout'
+alias pull='git pull'
+alias push='git push'
+alias gm='git merge'
+alias gra='git remote show origin'
+
+# alias to login to mysql -root
+alias mdb='mysql -u'
+alias mdbr='mysql -u root'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
