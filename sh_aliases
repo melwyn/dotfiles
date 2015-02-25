@@ -31,7 +31,10 @@ alias rc='ruby script/console'
 alias trc='RAILS_ENV=test ruby script/console'
 
 alias gl='gem list'
-alias lgs='rvm list gemsets'
+alias lgemst='rvm list gemsets'
+alias cgemst='rvm gemset create'
+alias ugemst='rvm gemset use'
+alias dgemst='rvm gemset delete'
 
 # some rake aliases
 alias rdbm='rake db:migrate'
