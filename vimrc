@@ -22,6 +22,9 @@ set statusline+=\ %P    "percent through file
 
 set laststatus=2
 
+" enable mouse
+set mouse=a
+
 " Auto Save
 let g:auto_save = 1
 
