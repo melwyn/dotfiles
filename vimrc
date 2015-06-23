@@ -161,3 +161,4 @@ vnoremap <Leader>c  :NERDComToggleComment
 
 imap <S-CR> <CR><CR>end<Esc>-cc
 
+highlight clear SignColumn
