@@ -22,6 +22,9 @@ set statusline+=\ %P    "percent through file
 
 set laststatus=2
 
+" enable mouse
+set mouse=a
+
 " Auto Save
 let g:auto_save = 1
 
@@ -99,12 +102,15 @@ augroup END
 
 let mapleader = ","
 
+vmap <Leader>bed "td?describe<CR>obefore :each do<CR><esc>k"tp
+map <Leader>tf irequire File.dirname(__FILE__<esc>la + '/../spec_helper<esc>o<CR>describe do<CR>describe "<esc>la do<CR><esc>
 map <Leader>eac :sp app/controllers/tds/application_controller.rb<cr>
 map <Leader>w :w!<cr> 
 map <Leader>wq :wq!<cr>
 map <Leader>rr :!rake routes<cr>
 " switch back and forth code and tests
 map <Leader>tt :A<cr>                 
+map <Leader>gb :Gblame<cr>
 
 " omnicomplete
 imap <Leader>. <C-x><C-p>
@@ -154,3 +160,5 @@ vnoremap <Leader>cu :NERDComUnCommentLine
 vnoremap <Leader>c  :NERDComToggleComment
 
 imap <S-CR> <CR><CR>end<Esc>-cc
+
+highlight clear SignColumn

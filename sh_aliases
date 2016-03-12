@@ -26,9 +26,9 @@ alias bb='cd ../..'
 alias bbb='cd ../../..'
 
 # some rails aliases
-alias rs='ruby script/server'
-alias rc='ruby script/console'
-alias trc='RAILS_ENV=test ruby script/console'
+alias r2s='ruby script/server'
+alias r2c='ruby script/console'
+alias tr2c='RAILS_ENV=test ruby script/console'
 
 alias gl='gem list'
 alias lgemst='rvm list gemsets'
@@ -47,6 +47,7 @@ alias sp='clear;spec --color -fs'
 
 # some git aliases
 alias g='git'
+alias gcl="git clone"
 alias gs='clear;git st'
 alias gb='git br'
 alias glo='git log'
@@ -56,7 +57,9 @@ alias grm='git rm'
 alias gcm='git commit'
 alias gco='git checkout'
 alias pull='git pull'
+alias pullfr='git pull origin'
 alias push='git push'
+alias pushto='git push origin'
 alias gm='git merge'
 alias gra='git remote show origin'
 alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
