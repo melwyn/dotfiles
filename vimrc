@@ -1,3 +1,46 @@
+set nocompatible              " be iMproved, required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/AutoTag'
+Plugin 'vim-scripts/VimClojure'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'rust-lang/rust.vim'
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'vim-scripts/vim-auto-save'
+Plugin 'tpope/vim-bundler'
+Plugin 'guns/vim-clojure-static'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'powerline/powerline'
+Plugin 'benmills/vimux'
+Plugin 'easysid/mod8.vim'
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 " =================
 " Bundles
 " Bundle 'tpope/vim-fugitive'
@@ -23,7 +66,7 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 " enable mouse
-set mouse=a
+" set mouse=a
 
 " Auto Save
 let g:auto_save = 1
@@ -31,7 +74,7 @@ let g:auto_save = 1
 " ===============
 " Ruby Stuff
 " ==============
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax on                 " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype plugin on    " Enable filetype-specific plugins
@@ -63,6 +106,29 @@ set lazyredraw
 " keep undo history
 set hidden
 
+" AirLine settigns
+set laststatus=2
+let g:airline_theme='molokai'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts=0
+
+"set guifont=Inconsolata\ for\ Powerline:h15
+"set guifont=Liberation\ Mono\ for\ Powerline\ 10
+"let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+"set term=xterm-256color
+set termencoding=utf-8
+
+" Color Theme settings
+set background=dark
+"colorscheme solarized
+let g:solarized_termcolors=256
+
+set term=screen-256color
+
 " Smart way to move between windows
 "map <Leader>j <C-W>j
 "map <Leader>k <C-W>k
@@ -75,6 +141,8 @@ set viminfo^=%
 
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
+
+let g:NERDTreeDirArrows=0
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 

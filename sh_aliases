@@ -39,6 +39,7 @@ alias dgemst='rvm gemset delete'
 # some rake aliases
 alias rdbm='rake db:migrate'
 alias rdbmp='rake db:migrate:plugins'
+alias rtdbs='RAILS_ENV=test rake test_db:setup username=mabraham output_file=db_skeleton.sql'
 
 alias trk='RAILS_ENV=test rake $1'
 
