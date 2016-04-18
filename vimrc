@@ -36,7 +36,7 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'powerline/powerline'
 Plugin 'benmills/vimux'
-Plugin 'easysid/mod8.vim'
+" Plugin 'easysid/mod8.vim'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -112,9 +112,9 @@ let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=0
 
-"set guifont=Inconsolata\ for\ Powerline:h15
-"set guifont=Liberation\ Mono\ for\ Powerline\ 10
-"let g:Powerline_symbols = 'unicode'
+set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Liberation\ Mono\ for\ Powerline\ 10
+let g:Powerline_symbols = 'unicode'
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
@@ -179,6 +179,11 @@ map <Leader>rr :!rake routes<cr>
 " switch back and forth code and tests
 map <Leader>tt :A<cr>                 
 map <Leader>gb :Gblame<cr>
+
+" tabs
+map <Leader>tn :tabnext<cr>
+map <Leader>tp :tabprevious<cr>
+map <Leader>tab :tabnew<cr>
 
 " omnicomplete
 imap <Leader>. <C-x><C-p>

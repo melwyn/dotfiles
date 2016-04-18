@@ -73,6 +73,16 @@ alias mdbr='mysql -u root'
 alias lrepl='lein repl'
 alias lnew='lein new'
 
+# sidekiq
+alias pskiq='ps aux | grep sidekiq'
+alias runkiq='sidekiq -C config/sidekiq.yml'
+
+# solr
+alias runsolr='rake sunspot:solr:start'
+
+# supplythis
+alias runst='runsolr;runkiq;rails s'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
