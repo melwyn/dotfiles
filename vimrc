@@ -64,6 +64,10 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
 set laststatus=2
+" toggle paste
+set pastetoggle=<F2>
+
+set clipboard=unnamed
 
 " enable mouse
 " set mouse=a
