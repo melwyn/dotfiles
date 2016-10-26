@@ -36,6 +36,7 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'powerline/powerline'
 Plugin 'benmills/vimux'
+Plugin 'vim-airline/vim-airline-theme'
 " Plugin 'easysid/mod8.vim'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
