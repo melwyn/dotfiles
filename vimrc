@@ -2,12 +2,16 @@ set nocompatible              " be iMproved, required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
+let g:autotagTagsFile=".tags"
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tomasr/molokai'
-Plugin 'vim-scripts/AutoTag'
+"Plugin 'craigemery/vim-autotag'
+"Plugin 'vim-scripts/AutoTag'
 Plugin 'vim-scripts/VimClojure'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
@@ -32,10 +36,10 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'powerline/powerline'
 Plugin 'benmills/vimux'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-theme'
 " Plugin 'easysid/mod8.vim'
 " " All of your Plugins must be added before the following line
@@ -68,10 +72,11 @@ set laststatus=2
 " toggle paste
 set pastetoggle=<F2>
 
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard+=unnamedplus
 
 " enable mouse
-" set mouse=a
+set mouse=a
 
 " Auto Save
 let g:auto_save = 1
@@ -114,6 +119,7 @@ set hidden
 " AirLine settigns
 set laststatus=2
 let g:airline_theme='molokai'
+let g:molokai_original = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=0
 
@@ -132,13 +138,7 @@ set background=dark
 "colorscheme solarized
 let g:solarized_termcolors=256
 
-set term=screen-256color
-
-" Smart way to move between windows
-"map <Leader>j <C-W>j
-"map <Leader>k <C-W>k
-"map <Leader>h <C-W>h
-"map <Leader>l <C-W>l
+" set term=screen-256color
 
 
 " Remember info about open buffers on close
@@ -195,12 +195,19 @@ imap <Leader>. <C-x><C-p>
 
 " Nerdtree
 map <Leader>nt :NERDTree<cr>
+let g:NERDTreeMouseMode=3
 
 map <Leader>m :!
 map <Leader>v :vsplit 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+
+" Smart way to move between windows
+"map <Leader>j <C-W>j
+"map <Leader>k <C-W>k
+"map <Leader>h <C-W>h
+"map <Leader>l <C-W>l
 
 " ruby refactor
 :nnoremap <leader>rap  :RAddParameter<cr>
