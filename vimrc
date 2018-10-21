@@ -98,6 +98,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set hlsearch
+" highlight current line
+set cursorline
 " set guifont=Monospace:h10
 
 "set shell=/bin/bash\ -i
