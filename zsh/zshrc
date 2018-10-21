@@ -97,3 +97,5 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gs="clear;gst"
+alias pull="ggpull"
+alias push="ggpush"
