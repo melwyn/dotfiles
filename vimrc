@@ -7,7 +7,6 @@ let g:autotagTagsFile=".tags"
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tomasr/molokai'
 "Plugin 'craigemery/vim-autotag'
 "Plugin 'vim-scripts/AutoTag'
 Plugin 'vim-scripts/VimClojure'
@@ -41,7 +40,8 @@ Plugin 'powerline/powerline'
 Plugin 'benmills/vimux'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-theme'
-Plugin 'valloric/youcompleteme'
+Plugin 'mhartington/oceanic-next'
+" Plugin 'valloric/youcompleteme'
 " Plugin 'easysid/mod8.vim'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -98,7 +98,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set hlsearch
-set guifont=Monospace:h10
+" set guifont=Monospace:h10
 
 "set shell=/bin/bash\ -i
 
@@ -119,8 +119,6 @@ set hidden
 
 " AirLine settigns
 set laststatus=2
-let g:airline_theme='molokai'
-let g:molokai_original = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=0
 
@@ -129,18 +127,19 @@ set guifont=Liberation\ Mono\ for\ Powerline\ 10
 let g:Powerline_symbols = 'unicode'
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
-set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 "set term=xterm-256color
 set termencoding=utf-8
 
+"""""""""""""""""""""""
 " Color Theme settings
+"""""""""""""""""""""""
+set t_Co=256
 set background=dark
-"colorscheme solarized
-let g:solarized_termcolors=256
-
-" set term=screen-256color
-
+color grb256
+" This line enables the true color support.
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 
 " Remember info about open buffers on close
 set viminfo^=%
