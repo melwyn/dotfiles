@@ -255,6 +255,9 @@ imap <S-CR> <CR><CR>end<Esc>-cc
 
 highlight clear SignColumn
 
+" key mappings for vim-tmux-runner
+let g:VtrUseVtrMaps = 1
+
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
