@@ -63,7 +63,7 @@ ZSH_CUSTOM=$HOME/dotfiles/ohmyzshcustom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git git-extras git-flow colored-man colorize ruby rails rvm bundler github vagrant virtualenv brew osx zsh-syntax-highlighting npm docker bower node sublime sudo
+  git git-extras git-flow colored-man colorize ruby rails rvm github zsh-syntax-highlighting npm docker bower node sublime sudo
 )
 
 source $ZSH/oh-my-zsh.sh

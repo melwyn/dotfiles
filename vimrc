@@ -41,6 +41,8 @@ Plugin 'benmills/vimux'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-theme'
 Plugin 'mhartington/oceanic-next'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-runner'
 " Plugin 'valloric/youcompleteme'
 " Plugin 'easysid/mod8.vim'
 " " All of your Plugins must be added before the following line
@@ -223,6 +225,8 @@ map <silent> <leader><cr> :noh<cr>
 :vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 :vnoremap <leader>rem  :RExtractMethod<cr>
 
+let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
+
 " Rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -250,3 +254,17 @@ vnoremap <Leader>c  :NERDComToggleComment
 imap <S-CR> <CR><CR>end<Esc>-cc
 
 highlight clear SignColumn
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" will open a tmux pane on the right, occupying 50% of the screen, and start
+" ruby's irb REPL.
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
+
+" open pane to run specs
+nnoremap <leader>sa :VtrOpenRunner {'orientation': 'v', 'percentage': 30}<cr>
