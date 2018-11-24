@@ -104,3 +104,4 @@ fi
 alias gs="clear;gst"
 alias pull="ggpull"
 alias push="ggpush"
+alias cat="bat"

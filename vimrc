@@ -268,6 +268,7 @@ nnoremap <leader>= :wincmd =<cr>
 " will open a tmux pane on the right, occupying 50% of the screen, and start
 " ruby's irb REPL.
 nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
+nnoremap <leader>rc :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'rc'}<cr>
 
 " open pane to run specs
 nnoremap <leader>sa :VtrOpenRunner {'orientation': 'v', 'percentage': 30}<cr>

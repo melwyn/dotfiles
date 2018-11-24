@@ -9,3 +9,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/usr/local/go/bin:$PATH"
+export GOPATH=$HOME/code/golang
