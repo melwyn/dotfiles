@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/melabrah/.oh-my-zsh"
+export ZSH="/home/melwyn/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vi'
 else
-  export EDITOR='nvim'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -104,3 +104,83 @@ fi
 alias gs="clear;gst"
 alias pull="ggpull"
 alias push="ggpush"
+
+export PATH="$PATH:/usr/local/bin"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
+export PATH="$PATH:/usr/local/mysql/bin"
+
+# libxml2
+export PATH="/opt/homebrew/opt/libxml2/bin:$PATH"
+# For compilers to find libxml2 you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/libxml2/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libxml2/include"
+
+# For pkg-config to find libxml2 you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libxml2/lib/pkgconfig"
+
+# autojump
+  [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+export QMAKE='/home/melwynabraham/Qt5.5.0/5.5/clang_64/bin/qmake'
+#export PATH="$PATH:$HOME/Qt5.5.0/5.5/clang_64/bin/"
+# for fidor db settings
+export DB_USERNAME='root'
+export DB_HOST='localhost'
+export DB_PORT='3306'
+export DB_PASSWORD='dummy'
+export PATH="/usr/local/opt/libiconv/bin:$PATH"
+export PATH="/usr/local/opt/libxslt/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+# nodejs
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# vim
+export LC_ALL=en_US.UTF-8
+
+# libiconv
+export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
+
+# openssl
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+
+# For compilers to find openssl@1.1 you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
+
+# For pkg-config to find openssl@1.1 you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
+
+# libpq
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# libpq For compilers to find libpq you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+
+source $HOME/dotfiles/sh_aliases
+
+# k9s config path
+export XDG_CONFIG_HOME="$HOME"
+
+#
+export TEMP_GITLAB_AUTH=W6aq__gqpLRnzXuVZdks@
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/melwyn/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+#
+#
+# Source rvm
+source "/etc/profile.d/rvm.sh"
