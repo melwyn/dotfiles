@@ -4,10 +4,10 @@ set nocompatible              " be iMproved, required
 autocmd!
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim/
 set rtp+=/usr/local/opt/fzf
 let g:autotagTagsFile=".tags"
-call vundle#begin()
+call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'craigemery/vim-autotag'
@@ -45,6 +45,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'fatih/vim-go'
 " Plugin 'valloric/youcompleteme'
 " Plugin 'easysid/mod8.vim'
+Plugin 'jremmen/vim-ripgrep'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,8 +59,8 @@ set laststatus=2
 " toggle paste
 set pastetoggle=<F2>
 
-" set clipboard=unnamed
-set clipboard+=unnamedplus
+set clipboard=unnamed
+" set clipboard+=unnamedplus
 
 " enable mouse
 set mouse=a
@@ -113,6 +114,7 @@ set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
+let g:rg_command = 'rg --vimgrep -S'
 
 " =============
 "
@@ -188,6 +190,7 @@ map <Leader>rr :!rake routes<cr>
 " switch back and forth code and tests
 map <Leader>tt :A<cr>                 
 map <Leader>gb :Gblame<cr>
+map <Leader>tj :tjump<cr>
 
 " tabs
 map <Leader>tn :tabnext<cr>
@@ -202,13 +205,13 @@ map <Leader>nt :NERDTree<cr>
 let g:NERDTreeMouseMode=3
 
 map <Leader>m :!
-map <Leader>v :vsplit 
+map <Leader>vs :vsplit 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
 "map <Leader>y "+y
 map <C-c> "+y
-
+map <C-f> :Rg<space>
 
 " Smart way to move between windows
 "map <Leader>j <C-W>j
@@ -433,4 +436,3 @@ nnoremap <leader>= :wincmd =<cr>
 " nnoremap <leader>sa :VtrOpenRunner {'orientation': 'v', 'percentage': 30}<cr>
 
 " RPROMPT="[%b%F{green}\$($HOME/.rvm/bin/rvm-prompt)%b%f]"
-
